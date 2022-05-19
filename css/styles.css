@@ -9,6 +9,10 @@
     --white: hsl(0, 0%, 100%);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 /* - Font size (paragraph): 18px */
 
 html {
@@ -42,9 +46,38 @@ body {
 /* CARD HEADER */
 /* ---------------------------------- */
 
+.card__header {
+    position: relative;
+}
+
+.card__header:hover {
+    cursor: pointer;
+    border-radius: 1rem;
+    background-color: var(--cyan);
+}  
+
 .card__image {
     width: 100%;
-    border-radius: 1.5rem;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.card__header:hover .card__image {
+    opacity: 0.7;
+}
+
+.card__image-hover {
+    transition: 0.5s ease;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.card__header:hover .card__image-hover {
+    opacity: 1;
 }
 
 /* ---------------------------------- */
@@ -64,6 +97,11 @@ body {
     font-size: 2.5rem;
 }
 
+.card__title:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
 .card__copy {
     color: var(--soft-blue);
     line-height: 2.5rem;
@@ -78,11 +116,25 @@ body {
 .card__eth {
     color: var(--cyan);
     font-weight: 600;
+    
+}
+
+.card__eth::before {
+    content: url("../images/icon-ethereum.svg");
+    margin-right: 0.5em;
+    vertical-align: middle;
 }
 
 .card__countdown {
     color: var(--soft-blue);
 }
+
+.card__countdown::before {
+    content: url("../images/icon-clock.svg");
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+
 
 /* ---------------------------------- */
 /* CARD FOOTER */
@@ -107,4 +159,9 @@ body {
 .card__author-name {
     color: var(--white);
     font-weight: 600;
+}
+
+.card__author-name:hover {
+    cursor: pointer;
+    color: var(--cyan);
 }
