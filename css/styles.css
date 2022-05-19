@@ -3,9 +3,9 @@
 :root {
     --soft-blue: hsl(215, 51%, 70%);
     --cyan: hsl(178, 100%, 50%);
-    --very-dark-blue: hsl(217, 54%, 11%);
-    --very-dark-blue: hsl(216, 50%, 16%);
-    --very-dark-blue: hsl(215, 32%, 27%);
+    --bg-main: hsl(217, 54%, 11%);
+    --bg-card: hsl(216, 50%, 16%);
+    --color-line: hsl(215, 32%, 27%);
     --white: hsl(0, 0%, 100%);
 }
 
@@ -20,3 +20,91 @@ body {
     font-family: 'Outfit', sans-serif;
 }
 
+.container {
+    height: 100vh;
+    background: var(--bg-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------------------------------- */
+/* CARD COMPONENT */
+/* ---------------------------------- */
+.card {
+    background-color: var(--bg-card);
+    max-width: 30rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+/* ---------------------------------- */
+/* CARD HEADER */
+/* ---------------------------------- */
+
+.card__image {
+    width: 100%;
+    border-radius: 1.5rem;
+}
+
+/* ---------------------------------- */
+/* CARD BODY */
+/* ---------------------------------- */
+.card__body {
+    border-bottom: 1px solid var(--color-line);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 0 2rem;
+}
+
+.card__title {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.card__copy {
+    color: var(--soft-blue);
+    line-height: 2.5rem;
+    font-weight: 200;
+}
+
+.card__data {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__eth {
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+.card__countdown {
+    color: var(--soft-blue);
+}
+
+/* ---------------------------------- */
+/* CARD FOOTER */
+/* ---------------------------------- */
+.card__footer {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card__avatar {
+    width: 4rem;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+.card__author {
+    color: var(--soft-blue);
+}
+
+.card__author-name {
+    color: var(--white);
+    font-weight: 600;
+}
