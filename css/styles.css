@@ -95,6 +95,7 @@ body {
     color: var(--white);
     font-weight: 600;
     font-size: 2.5rem;
+    transition: 0.5s ease;
 }
 
 .card__title:hover {
@@ -159,6 +160,7 @@ body {
 .card__author-name {
     color: var(--white);
     font-weight: 600;
+    transition: 0.5s ease;
 }
 
 .card__author-name:hover {
